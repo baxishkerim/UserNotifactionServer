@@ -39,7 +39,7 @@ public class EmailController {
     }
 
 
-    @GetMapping(value = "/email/")
+    @GetMapping(value = "/email")
     public ResponseObject<?>  sendEmailAttachment(@RequestParam String email,
                                        @RequestParam String subject,
                                        @RequestParam String message,
