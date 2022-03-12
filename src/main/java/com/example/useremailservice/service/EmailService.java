@@ -54,10 +54,7 @@ public class EmailService  implements  EmailServiceint  {
 }
 
 
-//    //TODO add exception handler based on ResponseObject
-//            //TODO get 'from' from properties file
-//            //TODO get these parameters from request
-
+ 
 
 
 
