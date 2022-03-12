@@ -24,7 +24,7 @@ public class EmailController {
   private EmailService emailService;
 
 
-    @GetMapping(value = "/simple-email")
+    @PostMapping(value = "/simple-email")
     public ResponseObject<?> sendSimpleEmail(@RequestParam String to,
                                              @RequestParam String subject,
                                              @RequestParam String message,
@@ -39,12 +39,12 @@ public class EmailController {
     }
 
 
-    @GetMapping(value = "/email")
-    public ResponseObject<?>  sendEmailAttachment(@RequestParam String email,
-                                       @RequestParam String subject,
-                                       @RequestParam String message,
-                                       @RequestParam String cc,
-                                       @RequestParam String bcc
+    @PosttMapping(value = "/email-attach")
+    public ResponseObject<?>  sendEmailAttachment(@RequestBody String email,
+                                       @RequestBody String subject,
+                                       @RequestBody String message,
+                                       @RequestBody String cc,
+                                       @RequestBody String bcc
                                        ) throws MailNotFound, FileNotFoundException, MessagingException {
             emailService.sendEmailWithAttachment(email, subject,message,
                     cc,bcc,null);
