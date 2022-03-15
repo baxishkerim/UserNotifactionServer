@@ -24,7 +24,7 @@ public class EmailController {
   private EmailService emailService;
 
 
-    @PostMapping(value = "/simple-email")
+    @PostMapping(path = "/simple-email")
     public ResponseObject<?> sendSimpleEmail(@RequestParam String to,
                                              @RequestParam String subject,
                                              @RequestParam String message,
@@ -39,7 +39,7 @@ public class EmailController {
     }
 
 
-    @PosttMapping(value = "/email-attach")
+    @PosttMapping(path = "/email-attach")
     public ResponseObject<?>  sendEmailAttachment(@RequestBody String email,
                                        @RequestBody String subject,
                                        @RequestBody String message,
